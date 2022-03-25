@@ -12,9 +12,4 @@ endif
 let b:did_manpager = 1
 exec "setlocal iskeyword+=\x1,\x2,_"
 
-nnoremap <buffer> q :q!<CR>
-nnoremap <buffer> <Space> <PageDown>
-nnoremap <buffer> <CR>  :call manpager#CursorMan()<CR>
-nnoremap <buffer> K  :call manpager#CursorMan()<CR>
-
 command! MANPAGER :call  manpager#PrepManPager($MAN_PN)
