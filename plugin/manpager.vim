@@ -19,7 +19,7 @@ endfunction
 
 function! manpager#CursorMan()
     let l:word = substitute(expand('<cWORD>'), '\%x1', '', 'g')
-    let l:manpage = matchlist(l:word, '\(\w*\)\((\(\d\w*\))\)\?')
+    let l:manpage = matchlist(l:word, '\v(%(\w|-)*)\((\d)\)')
     call manpager#Man(l:manpage[3], l:manpage[1])
 endfunction
 
